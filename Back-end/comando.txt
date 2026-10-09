@@ -1,0 +1,4 @@
+rodar os seguintes comandos:
+npm install mongodb
+npm i
+npm react-routes-dom
