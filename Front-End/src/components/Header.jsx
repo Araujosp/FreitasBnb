@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/FreitasBnb.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,47 +8,47 @@ const Header = () => {
       <div className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
         
         {/* 1. Logo */}
-        <div className="w-20 h-20 flex items-center">
+        <Link to="/" className="w-20 h-20 flex items-center">
           <img
             src={logo}
             alt="Logo FreitasBnb"
             className="w-full h-full object-contain cursor-pointer"
           />
-        </div>
+        </Link>
 
         {/* 2. Barra de pesquisa */}
-        <div className="flex items-center border border-gray-300 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer text-sm font-medium">
-          <p className="pr-4 border-r border-gray-300">
-            Qualquer lugar
-          </p>
-          <p className="px-4 border-r border-gray-300">
-            Qualquer Semana
-          </p>
-          <p className="px-4  font-normal">
-            Hóspedes
-          </p>
+        <Link to="/" className=" hidden lg:flex items-center border border-gray-300 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer text-sm font-medium">
+            <p className="pr-4 border-r border-gray-300">
+              Qualquer lugar
+            </p>
+            <p className="px-4 border-r border-gray-300">
+              Qualquer Semana
+            </p>
+            <p className="px-4  font-normal">
+              Hóspedes
+            </p>
 
-          {/* Ícone de pesquisa */}
-          <div className="bg-rose-500 rounded-full p-2 text-white ml-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2.5}
-              stroke="currentColor"
-              className="w-3.5 h-3.5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
-          </div>
-        </div>
+            {/* Ícone de pesquisa */}
+            <div className="bg-rose-500 rounded-full p-2 text-white ml-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2.5}
+                stroke="currentColor"
+                className="w-3.5 h-3.5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </div>
+      </Link >
 
         {/* 3. Seção do Perfil (Menu + Usuário) */}
-        <div className="flex items-center gap-4">
+        <Link to ="/login" className="flex items-center gap-4">
           
 
           {/* Botão de Menu e Avatar */}
@@ -81,11 +82,11 @@ const Header = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <p className="text-sm font-semibold cursor-pointer hidden md:block">
+            <p className="max-w-20 truncate">
             Araujoosp
           </p>
           </div>
-        </div>
+        </Link>
 
       </div>
     </header>
