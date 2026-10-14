@@ -1,4 +1,5 @@
 rodar os seguintes comandos:
 npm install mongodb
+npm i mongoose
 npm i
 npm react-routes-dom
